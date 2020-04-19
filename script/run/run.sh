@@ -2,13 +2,14 @@
 
 #mvn clean package -U
 mvn --version
-#E:/Software/Maven/apache-maven-3.6.3/bin/mvn clean
-mvn clean package
+E:/Software/Maven/apache-maven-3.6.3/bin/mvn clean
+#mvn clean package
+: '
 if [ $? != 0 ];then
     echo "build failed!"
 	exit 1
 fi
-: '
+
 '
 
 #yarn --cluster zjyprc-hadoop application -kill application_1564666114135_333647
