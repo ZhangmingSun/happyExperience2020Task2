@@ -30,3 +30,4 @@ echo `cat ${localPath}/szm.txt`
 
 
 echo "Finish the Task!"
+exit 0
