@@ -1,8 +1,9 @@
 #!/bin/bash
 
 #mvn clean package -U
-
-mvn clean package
+mvn --version
+E:/Software/Maven/apache-maven-3.6.3/bin/mvn clean
+E:/Software/Maven/apache-maven-3.6.3/bin/mvn clean package
 if [ $? != 0 ];then
     echo "build failed!"
 	exit 1
