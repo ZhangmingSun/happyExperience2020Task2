@@ -14,15 +14,19 @@ fi
 #hadoop --cluster zjyprc-hadoop fs -rm -r ${outputPath}
 
 scriptPath=script/run #工程相对路径
-localPath=/home/szm/tencentContest2020/data #本地绝对路径
+#localPath=/home/szm/tencentContest2020/data #本地绝对路径
+localPath="E:/Software/Cygwin/setup/home/szm/tencentContest2020/data" #本地绝对路径
+
+cat ${localPath}/test | grep szm > ${localPath}/szm.txt
+echo `cat ${localPath}/szm.txt`
 
 #=========================XXX========================
 #echo "sh script/feature/gen_group_features.sh 7"
 #sh script/feature/gen_group_features.sh 7
 
 #echo "run gen_group_features_v2.sh 7 21"
-#python script/tools/MultiAutoRunV2_16days.py script/feature/gen_group_features_v2.sh 7 21
+#python script/tools/MultiAutoRun_8days.py script/feature/gen_group_features_v2.sh 7 21
 
 
 
-echo "Finish All Tasks!"
+echo "Finish the Task!"

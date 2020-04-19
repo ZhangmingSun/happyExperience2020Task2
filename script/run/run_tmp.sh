@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 #mvn clean package -U
 : '
@@ -14,7 +14,8 @@ fi
 #hadoop --cluster zjyprc-hadoop fs -rm -r ${outputPath}
 
 scriptPath=script/run #工程相对路径
-localPath=/home/szm/tencentContest2020/data #本地绝对路径
+#localPath=/home/szm/tencentContest2020/data #本地绝对路径
+localPath="E:/Software/Cygwin/setup/home/szm/tencentContest2020/data" #本地绝对路径
 
 cat ${localPath}/test | grep szm > ${localPath}/szm.txt
 echo `cat ${localPath}/szm.txt`
