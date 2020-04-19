@@ -22,7 +22,7 @@ localPath="E:/Software/Cygwin/setup/home/szm/tencentContest2020/data" #本地绝
 
 echo `cat ${localPath}/test | grep hello`
 echo "run test.py"
-python script/data/test.py
+/usr/bin/python script/data/test.py
 
 #=========================XXX========================
 #echo "sh script/feature/gen_group_features.sh 7"
