@@ -2,14 +2,16 @@
 
 #mvn clean package -U
 mvn --version
-E:/Software/Maven/apache-maven-3.6.3/bin/mvn clean
-#mvn clean package
-: '
+#E:/Software/Maven/apache-maven-3.6.3/bin/mvn clean
+
+cd ..; cd ..;
+mvn clean package
+cd script/data/
 if [ $? != 0 ];then
     echo "build failed!"
 	exit 1
 fi
-
+: '
 '
 
 #yarn --cluster zjyprc-hadoop application -kill application_1564666114135_333647
@@ -25,6 +27,10 @@ localPath="E:/Software/Cygwin/setup/home/szm/tencentContest2020/data" #本地绝
 
 echo `cat ${localPath}/test | grep hello`
 echo "run test.py"
+#E:/Software/Cygwin/setup/usr/bin/python script/data/test.py
+#/cygdrive/e/Software/Cygwin/setup/usr/bin/python script/data/test.py
+#python script/data/test.py #D:\software2\Anaconda3\setup\python.exe
+#python E:/Software/Cygwin/setup/home/szm/tencentContest2020/contest2020V1/script/data/test.py
 /usr/bin/python script/data/test.py
 
 #=========================XXX========================
