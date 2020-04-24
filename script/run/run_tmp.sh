@@ -11,7 +11,7 @@ if [ $? != 0 ];then
 fi
 '
 
-echo `which python`
+#echo `which python`
 
 #scriptPath=script/run #工程相对路径
 #localPath=/home/szm/tencentContest2020/data #本地绝对路径，这个路径不行，会出错!!!
@@ -34,8 +34,8 @@ localScriptPath="E:/Software/Cygwin/setup/home/szm/KDD_Cup_2020_t2/happyExperien
 #python E:/Software/Cygwin/setup/home/szm/tencentContest2020/contest2020V1/script/data/test.py
 
 #python script/data/test.py #这行命令只能在当前script所在的目录才能执行
-#python ${localScriptPath}/test/test.py
-/usr/bin/python ${localScriptPath}/data/test.py
+python ${localScriptPath}/test/test.py
+#/usr/bin/python ${localScriptPath}/data/test.py
 
 
 echo "Finish the Task!"
