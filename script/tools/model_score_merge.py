@@ -7,23 +7,23 @@ dict_dnn = {}
 dict_ftrl = {}
 dict = {} # after merge dict
 
-#========================°ÑÊı¾İ¶ÁÈë×Öµä========================
+#========================æŠŠæ•°æ®è¯»å…¥å­—å…¸========================
 #fs_dnn = open('1.txt', 'r')  #dnn
 #fs_ftrl = open('2.txt', 'r') #ftrl
 fs_dnn = open('dnn.csv', 'r')  #dnn
 fs_ftrl = open('ftrl.csv', 'r') #ftrl
 
-#¶ÁÈ¡part1£¬´æÈë×Öµädict1
-for line in fs_dnn.readlines():    #ÒÀ´Î¶ÁÈ¡Ã¿ĞĞ  
-    line = line.strip()   #È¥µôÃ¿ĞĞÍ·Î²¿Õ°×  
+#è¯»å–part1ï¼Œå­˜å…¥å­—å…¸dict1
+for line in fs_dnn.readlines():    #ä¾æ¬¡è¯»å–æ¯è¡Œ
+    line = line.strip()   #å»æ‰æ¯è¡Œå¤´å°¾ç©ºç™½
     dict_dnn[line.split(",")[0]] = line.split(",")[1]
-    
-#¶ÁÈ¡part2£¬´æÈë×Öµädict2
+
+#è¯»å–part2ï¼Œå­˜å…¥å­—å…¸dict2
 for line in fs_ftrl.readlines():
     line = line.strip()
     dict_ftrl[line.split(",")[0]] = line.split(",")[1]
 
-for (k,v) in dict_dnn.items(): 
+for (k,v) in dict_dnn.items():
     merge_value = float(dict_dnn[k])*0.75 + float(dict_ftrl[k])*0.25
     dict[k] = str(merge_value)[0:8]
     if "e" in str(merge_value) :
@@ -32,10 +32,10 @@ for (k,v) in dict_dnn.items():
 fs_dnn.close()
 fs_ftrl.close()
 
-#========================Êı¾İ±£´æ========================
-fileObject = open('merge.µÍ¿Õ·ÉÏè_10XX_X.csv', 'w')
-for (k,v) in dict.items(): 
+#========================æ•°æ®ä¿å­˜========================
+fileObject = open('merge.ä½ç©ºé£ç¿”_10XX_X.csv', 'w')
+for (k,v) in dict.items():
     #print "dict[%s]=" % k,v 
     fileObject.write(str(k)+','+str(v))
-    fileObject.write('\n') 
+    fileObject.write('\n')
 fileObject.close()
