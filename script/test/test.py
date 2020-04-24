@@ -7,7 +7,7 @@ import math
 
 
 if __name__ == "__main__":
-    now_phase = 1
+    now_phase = 3
     #train_path = 'data/underexpose_train'
     #test_path = 'data/underexpose_test'
     train_path="/home/szm/work/kddCup_2020_t2/data/underexpose_train"
@@ -36,7 +36,7 @@ if __name__ == "__main__":
     # find most popular items
     top50_click = whole_click['item_id'].value_counts().index[:50].values
     top50_click = ','.join([str(i) for i in top50_click])
-    print('find most popular items')
+    print('find most popular items:', top50_click)
 
     '''
     recom_df = pd.DataFrame(recom_item, columns=['user_id', 'item_id', 'sim'])  
