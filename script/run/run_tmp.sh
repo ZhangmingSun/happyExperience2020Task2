@@ -33,8 +33,9 @@ localScriptPath="E:/Software/Cygwin/setup/home/szm/KDD_Cup_2020_t2/happyExperien
 #注意python实际的执行目录是: D:\software2\Anaconda3\setup\python.exe，而不是/usr/bin/python
 #python E:/Software/Cygwin/setup/home/szm/tencentContest2020/contest2020V1/script/data/test.py
 
-#python script/data/test.py #这行命令只能在当前script所在的目录才能执行
-python ${localScriptPath}/test/test.py
+python script/data/test.py #这行命令只能在当前script所在的目录才能执行
+#python ${localScriptPath}/test/test.py
+
 #/usr/bin/python ${localScriptPath}/data/test.py
 
 
