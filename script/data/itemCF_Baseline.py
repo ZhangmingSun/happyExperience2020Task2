@@ -16,14 +16,14 @@ def get_sim_item(df, user_col, item_col, use_iif=False):
     for user, items in tqdm(user_item_dict.items()):  
         for i in items:  
             item_cnt[i] += 1  
-	    sim_item.setdefault(i, {})  
+	    sim_item.setdefault(i, {})
             for relate_item in items:  
                 if i == relate_item:  
                     continue  
 		sim_item[i].setdefault(relate_item, 0)  
                 if not use_iif:  
                     sim_item[i][relate_item] += 1  
-		else:  
+        else:
                     sim_item[i][relate_item] += 1 / math.log(1 + len(items))  
     sim_item_corr = sim_item.copy()  
     for i, related_items in tqdm(sim_item.items()):  
