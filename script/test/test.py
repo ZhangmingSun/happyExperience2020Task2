@@ -8,8 +8,10 @@ import math
 
 if __name__ == "__main__":
     now_phase = 1
-    train_path = 'data/underexpose_train'
-    test_path = 'data/underexpose_test'
+    #train_path = 'data/underexpose_train'
+    #test_path = 'data/underexpose_test'
+    train_path="/home/szm/work/kddCup_2020_t2/data/underexpose_train"
+    test_path="/home/szm/work/kddCup_2020_t2/data/underexpose_test"
     #train_path = 'E:/Software/Cygwin/setup/home/szm/KDD_Cup_2020_t2/data/underexpose_train'
     #test_path = 'E:/Software/Cygwin/setup/home/szm/KDD_Cup_2020_t2/data/underexpose_test'
     recom_item = []
@@ -22,7 +24,7 @@ if __name__ == "__main__":
 
         all_click = click_train.append(click_test)
         whole_click = whole_click.append(all_click)
-        item_sim_list, user_item = get_sim_item(all_click, 'user_id', 'item_id', use_iif=True)
+        #item_sim_list, user_item = get_sim_item(all_click, 'user_id', 'item_id', use_iif=True)
 
         '''
         for i in tqdm(click_test['user_id'].unique()):

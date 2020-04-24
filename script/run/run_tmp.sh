@@ -17,10 +17,10 @@ fi
 #scriptPath=script/run #工程相对路径
 localDataTestPath="/home/szm/work/kddCup_2020_t2/data/underexpose_test"
 localDataTrainPath="/home/szm/work/kddCup_2020_t2/data/underexpose_train"
-localProjectPath="/home/szm/work/happyExperience2020Task2" #
+localProjectPath="/home/szm/work/kddCup_2020_t2/happyExperience2020Task2" #
 
-python ${localProjectPath}/script/data/test.py
-#python ${localProjectPath}/script/test/test.py
+#python ${localProjectPath}/script/data/test.py
+python ${localProjectPath}/script/test/test.py
 
 
 
