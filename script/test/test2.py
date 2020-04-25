@@ -9,7 +9,7 @@ import sys
 
 if __name__ == "__main__":
     if len(sys.argv) <= 3:
-        print("Error! You need to input 3 parameter!!!")
+        print("Error! You need to input 3 parameter!")
         sys.exit()
 
     #now_phase = 3
