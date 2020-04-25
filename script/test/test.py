@@ -38,6 +38,11 @@ if __name__ == "__main__":
     top50_click = ','.join([str(i) for i in top50_click])
     print('find most popular items:', top50_click)
 
+    fileObject = open('/home/szm/work/kddCup_2020_t2/out_test.csv', 'w')
+    fileObject.write(top50_click)
+    fileObject.write('\n')
+    fileObject.close()
+
     '''
     recom_df = pd.DataFrame(recom_item, columns=['user_id', 'item_id', 'sim'])  
     result = get_predict(recom_df, 'sim', top50_click)  
